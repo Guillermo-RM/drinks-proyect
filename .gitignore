@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# Vite build output
+dist/
+.vite/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Optional: coverage reports
+coverage/
+
+# Optional: local development files
+*.local.js
+*.local.ts
+
+# Optional: Mac system files
+*.DS_Store
