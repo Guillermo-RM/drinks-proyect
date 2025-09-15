@@ -1,0 +1,296 @@
+@use '../base/globals' as g;
+// Fonts
+$goticTitle :"Uncial Antiqua", system-ui;
+$goticSubtitle :"Cinzel Decorative", serif;
+$goticText :"Spectral SC", serif;
+
+// Colors
+$gotic-dark : #000000;
+$gotic-silver : #a9a9a9;
+$gotic-red : #e91616;
+$gotic-deep-red : #8B0000;
+$gotic-brown : #800000;
+
+.gotic-wallpaper{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url('background/gotic-wallpaper.webp');
+    background-position: center;
+    background-size: cover;
+
+    .gotic-link{
+        font-family: $goticSubtitle;
+        font-size: 5vw;
+        font-weight: 600;
+        color: white;
+        letter-spacing: 1px;
+        transition: 0.5s;
+        &:hover{
+            color: $gotic-red;
+        }
+    }
+    .gotic-toggler-nav{
+        background-color: rgba($gotic-dark, 0.9);
+        border-radius: 5px;
+        border: 2px solid $gotic-deep-red;
+        padding: 20px;
+    }
+    .gotic-first-phrase{
+        text-align: center;
+        font-family: $goticSubtitle;
+        color: white;
+    }
+    .gotic-slogan-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .gotic-second-phrase{
+        font-family: $goticTitle;
+        font-size: 7vw;
+        font-weight: 600;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+        letter-spacing: 2px;
+        color: $gotic-deep-red;
+    }
+    .gotic-third-phrase{
+        font-family: $goticTitle;
+        font-size: 5vw;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+        color: white;
+    }
+    .gotic-principal-image{
+        filter: brightness(85%);
+        z-index: 1;
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+    }
+    .gotic-primary-button{
+        background-color: $gotic-brown;
+        color: $gotic-silver;
+        padding: 8px 12px;
+        font-family: $goticText;
+        font-weight: 500;
+        font-size: 15px;
+        font-style: normal;
+        transition: 0.5s;
+
+        &:hover{
+            background-color: $gotic-dark;
+            color: $gotic-red;
+            border-radius: 10px;
+        }
+    }
+    .gotic-secondary-button{
+        background-color: $gotic-silver;
+        color: $gotic-deep-red;
+        padding: 8px 12px;
+        transition: 0.5s;
+        font-family: $goticText;
+        font-weight: 500;
+        font-size: 15px;
+        font-style: normal;
+
+        &:hover{
+            background-color: $gotic-dark;
+            color: $gotic-silver;
+        }
+    }
+    .gotic-lateral-text-container{
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .gotic-first-lateral-text{
+            font-family: $goticSubtitle;
+            font-size: 7vw;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+            color: $gotic-deep-red;
+            text-transform: uppercase;
+        }
+        .gotic-second-lateral-text{
+            font-size: 5vw;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+            font-family: $goticSubtitle;
+            color: white;
+            text-transform: uppercase;
+        }
+    }
+    .miniature-gotic-image{
+        filter: brightness(90%);
+        cursor: pointer;
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+        transition: 0.6s;
+        &:hover{
+            width: auto;
+            filter: brightness(120%);
+        }
+    }
+    .GOminiature-tropical-image,
+    .GOminiature-fantasy-image,
+    .GOminiature-cyberpunk-image {
+        cursor: pointer;
+        filter: brightness(40%);
+        transition: 0.6s;
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+
+        &:hover {
+            filter: brightness(100%);
+        }
+    }
+    .gotic-div-gradient{
+        background-color: rgba(0, 0, 0, 0.7);
+        height: 15vh;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@include g.tablet{
+    .gotic-wallpaper{
+        background-position: center;
+        background-size: cover;
+    
+        .gotic-link{
+            font-size: 20px;
+        }
+        .gotic-first-phrase{
+            font-size: 4vw;
+        }
+        .gotic-second-phrase{
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+            letter-spacing: 2px;
+            color: $gotic-deep-red;
+        }
+        .gotic-primary-button{
+            padding: 10px 15px;
+            font-size: 18px;
+        }
+        .gotic-secondary-button{
+            padding: 10px 15px;
+            font-size: 18px;
+        }
+        .gotic-second-lateral-text{
+            font-size: 6vw;
+        }
+    }
+}
+
+@include g.desktop{
+    .gotic-wallpaper{
+        background-position: center;
+        background-size: cover;
+    
+        .gotic-link{
+            font-size: 13px;
+            font-weight: 400;
+            margin-right: 25px;
+        }
+        .gotic-toggler-nav{
+            background-color: rgba($gotic-dark, 0);
+            border-radius: 0px;
+            border: 0;
+            padding: 0;
+        }
+        .gotic-first-phrase{
+            font-size: 18px;
+        }
+        .gotic-second-phrase{
+            text-align: start !important;
+            font-size: 5.2vw;
+            letter-spacing: 2px;
+            font-weight: 400;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1)
+        }
+        .gotic-third-phrase{
+            text-align: left;
+            font-size: 47px;
+            letter-spacing: 1px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1)
+        }
+        .gotic-principal-image{
+            filter: brightness(85%);
+            width: auto;
+            height: 50%;
+        }
+        .gotic-primary-button{
+            padding: 7px 13px;
+        }
+        .gotic-secondary-button{
+            padding: 7px 13px;
+        }
+        .gotic-lateral-text-container{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            place-items: center;
+            height: 100vh;
+            z-index: 1;
+
+            .gotic-first-lateral-text{
+                transform: rotate(270deg);
+                font-family: $goticSubtitle;
+                color: $gotic-deep-red;
+                
+                text-transform: uppercase;
+                font-size: 75px;
+                font-weight: 700;
+            }
+            .gotic-second-lateral-text{
+                transform: rotate(270deg);
+                font-family: $goticSubtitle;
+                color: white;
+                text-transform: uppercase;
+                font-size: 70px;
+                font-weight: 500;
+            }
+        }
+        .miniature-gotic-image{
+            filter: brightness(90%);
+            cursor: pointer;
+            height: 105px;
+            width: 100%;
+            object-fit: cover;
+            transition: 0.6s;
+
+            &:hover{
+                width: auto;
+                filter: brightness(120%);
+            }
+        }
+        .GOminiature-tropical-image,
+        .GOminiature-fantasy-image,
+        .GOminiature-cyberpunk-image {
+            cursor: pointer;
+            height: 95px;
+            width: auto;
+            filter: brightness(40%);
+            transition: 0.6s;
+
+            &:hover{
+                filter: brightness(100%);
+            }
+        }
+        .gotic-div-gradient{
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 100vh;
+            width: 25%;
+            left: initial;
+            right: 0;
+        }
+    }
+}

@@ -1,0 +1,269 @@
+@use '../base/globals' as g;
+
+// Fonts
+$fantasyTitle: "Great Vibes", cursive;
+$fantasySubtitle: "Dancing Script", cursive;
+$fantasyText: "Uncial Antiqua", system-ui;
+
+//Colors
+$fantasy-light-blue: #1AADD5;
+$fantasy-pink: #fd79b5;
+$fantasy-dark-pink: #D78BB8;
+$fantasy-yellow: #eed93b;
+
+.fantasy-wallpaper{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('background/fantasy-wallpaper.webp');
+  background-position: center;
+  background-size: cover; 
+    .fantasy-link{
+      font-family: $fantasySubtitle;
+      font-size: 5vw;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+      color: white;
+      transition: 0.5s;
+
+    &:hover{
+        color: $fantasy-yellow;
+      }
+    }
+    .fantasy-toggler-nav{
+      background-color: rgba($fantasy-light-blue, 0.8);
+      border-radius: 20px;
+      border: 2px solid $fantasy-yellow;
+      padding: 20px;
+    }
+    .fantasy-slogan-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .fantasy-second-phrase{
+      font-family: $fantasyTitle;
+      font-size: 11vw;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+      letter-spacing: 1px;
+      color: $fantasy-light-blue;
+    }
+    .fantasy-third-phrase{
+      font-family: $fantasyTitle;
+      font-size:11vw;
+      letter-spacing: 1px;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+      color: $fantasy-light-blue;
+    }
+    .fantasy-principal-image {
+      filter: brightness(85%);
+      z-index: 1;
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+    .fantasy-primary-button {
+        border: none;
+        font-weight: 400;
+        background-color: $fantasy-dark-pink;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 10px;
+        transition: 0.7s;
+
+        &:hover {
+        background-color: $fantasy-light-blue;
+        color: white;
+        }
+    }
+    .fantasy-secondary-button {
+        border: none;
+        background-color: white;
+        color: $fantasy-light-blue;
+        padding: 8px 12px;
+        border-radius: 10px;  
+        transition: 0.3s;
+
+        &:hover {
+        background-color: $fantasy-light-blue;
+        color: white;
+        }
+    }
+    .fantasy-lateral-text-container {
+      text-align: center;
+      z-index: 1;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .fantasy-first-lateral-text {
+        font-family: $fantasySubtitle;
+        font-size: 14vw;
+        font-weight: 500;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+        letter-spacing: 2px;
+        color: $fantasy-yellow;
+      }
+    }
+    .miniature-fantasy-image {
+      filter: brightness(90%);
+      cursor: pointer;
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+      transition: 0.6s;
+
+      &:hover {
+        filter: brightness(110%);
+      }
+    }
+    .FTminiature-gotic-image,
+    .FTminiature-tropical-image,
+    .FTminiature-cyberpunk-image {
+      cursor: pointer;
+      filter: brightness(40%);
+      transition: 0.6s;
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+
+      &:hover {
+        filter: brightness(90%);
+      }
+    }
+    .fantasy-div-gradient {
+      background-color: rgba(26, 173, 213, 0.3);
+      height: 14.5vh;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+}
+
+@include g.tablet {
+  .fantasy-wallpaper {
+    background-position: center;
+    background-size: cover;
+
+    .fantasy-link {
+      font-size: 18px;
+    }
+    .fantasy-second-phrase{
+      font-size: 9vw;
+    }
+    .fantasy-third-phrase{
+      font-size: 9vw;
+    }
+    .fantasy-primary-button {
+      padding: 15px 20px;
+      font-size: 18px;
+    }
+    .fantasy-secondary-button {
+      padding: 15px 20px;
+      font-size: 18px;
+    }
+    .fantasy-lateral-text-container {
+      .fantasy-first-lateral-text {
+        font-size: 10vw;
+      }
+    }
+  }
+}
+
+@include g.desktop {
+  .fantasy-wallpaper {
+    background-position: center;
+    background-size: cover;
+
+    .fantasy-link {
+      font-size: 20px;
+      font-weight: 400;
+      margin-right: 25px;
+    }
+    .fantasy-toggler-nav{
+      background-color: rgba($fantasy-light-blue, 0);
+      border-radius: 0px;
+      border: 0;
+      padding: 0;
+    }
+    .fantasy-second-phrase{
+      text-align: left; 
+      font-size: 5.3vw;
+      letter-spacing: 2px;
+      font-weight: 400;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    }
+    .fantasy-third-phrase{
+      text-align: left;
+      font-size: 4.8vw;
+      letter-spacing: 1px;
+      color: white;
+    }
+    .fantasy-principal-image {
+      filter: brightness(85%);
+      width: auto;
+      height: 50%;
+    }
+    .fantasy-primary-button {
+      padding: 8px 13px;
+    }
+    .fantasy-secondary-button {
+      padding: 8px 13px;
+    }
+    .fantasy-lateral-text-container {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+      .fantasy-first-lateral-text {
+        transform: rotate(270deg);
+        font-family: $fantasySubtitle;
+        text-transform: uppercase;
+        font-size: 6vw;
+        white-space: nowrap;
+        font-weight: 500;
+      }
+    }
+    .miniature-fantasy-image {
+      filter: brightness(90%);
+      cursor: pointer;
+      height: 105px;
+      width: 100%;
+      object-fit: cover;
+      transition: 0.6s;
+
+      &:hover{
+          width: auto;
+          filter: brightness(120%);
+      }
+    }
+    .FTminiature-gotic-image,
+    .FTminiature-tropical-image,
+    .FTminiature-cyberpunk-image {
+      cursor: pointer;
+      height: 95px;
+      width: auto;
+      filter: brightness(40%);
+      transition: 0.6s;
+
+      &:hover{
+          filter: brightness(100%);
+      }
+    }
+    .fantasy-div-gradient {
+      background-color: rgba($fantasy-light-blue, 0.4);
+      height: 100vh;
+      width: 27%;
+      left: initial;
+      right: 0;
+    }
+  }
+}

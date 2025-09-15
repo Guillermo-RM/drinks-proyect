@@ -1,0 +1,39 @@
+//Media Queries
+$tablet: 500px;
+$desktop: 992px;
+$desktopXL: 1400px;
+
+@mixin tablet {
+    @media (min-width: $tablet){
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: $desktop){
+        @content;
+    }
+}
+@mixin desktopXL {
+    @media (min-width: $desktopXL){
+        @content;
+    }
+}
+
+//Globals
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+a{
+    text-decoration: none;
+}
+button{
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}

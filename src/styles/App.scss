@@ -1,0 +1,109 @@
+@use './base/globals' as g;
+@forward './drinks/gotic';
+@forward './drinks/tropical';
+@forward './drinks/fantasy';
+@forward './drinks/cyberpunk';
+
+.principal-container{
+    height: 100vh;
+    display: grid;
+    padding: 0 15px;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 6% 13% 40% 11% 12% 10%;
+    overflow: hidden;
+
+    .navbar-container{
+        grid-row: 1/2;
+        text-align: center;
+        z-index: 10;
+    }
+    .first-phrase-container{
+        grid-row: 2 / 3;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .slogan-container{
+        grid-row: 3 / 4;
+    }
+    .image-container{
+        grid-row: 4 / 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .drink-name-container{
+        grid-row: 5 / 6;
+    }
+    .buttons-container{
+        grid-row: 6 / 7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        z-index: 1;
+    }
+    .drinks-container{
+        grid-row: 7 / 8;
+        display: flex;
+        justify-content: space-evenly;
+        z-index: 1;
+    }
+}
+
+@include g.tablet{
+    .principal-container{
+        grid-template-rows: 4% 4% 15% 41% 11% 12% 10%;
+    }
+}
+
+@include g.desktop{
+    .principal-container{
+        grid-template-columns: 60% 20% 20%;
+        grid-template-rows: 12.5% 12.5% 35% 10% 30%;
+        padding-left: 2.7%;
+    
+        .navbar-container{
+            grid-column: 1 / 2;
+            display: flex;
+        }
+        .first-phrase-container{
+            display: flex;
+            align-items: end;
+            justify-content: flex-start;
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+        .slogan-container{
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            align-items: flex-start;
+        }
+        .buttons-container{
+            justify-content: flex-start;
+            gap: 15px;
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+        }
+        .drinks-container{
+            grid-column: 1 / 2;
+            grid-row: 5 / 6;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 55px;
+        }
+        .image-container{
+            grid-column: 2 / 3;
+            grid-row: 1 / 6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .drink-name-container{
+            grid-column: 3 / 4;
+            grid-row: 1 / 6;
+        }
+    }
+}
+

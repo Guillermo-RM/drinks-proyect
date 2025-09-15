@@ -1,0 +1,300 @@
+@use '../base/globals' as g;
+
+// Fonts
+$tropical-title: "Pacifico";
+$tropical-subtitle: "Amatic SC", sans-serif;
+$tropical-text: "Quicksand", sans-serif;
+
+// Colors
+$tropical-dark: #000000;
+$tropical-primary: #FFA500;
+$tropical-primary-complement: #f7ae28;
+$tropical-secondary: #cc3701;
+$tropical-backs: #3CB371;
+$tropical-complement: #40E0D0;
+
+.tropical-wallpaper {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('background/tropical-wallpaper.webp');
+  background-position: center;
+  background-size: cover;
+
+  .tropical-link {
+    font-family: $tropical-subtitle;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    color: white;
+    transition: 0.5s;
+
+    &:hover {
+      color: $tropical-primary-complement;
+    }
+  }
+  .tropical-toggler-nav {
+    background-color: rgba($tropical-secondary, 0.8);
+    border-radius: 15px;
+    border: 2px solid $tropical-complement;
+    padding: 20px;
+  }
+  .tropical-first-phrase{
+    font-family: $tropical-title;
+    text-align: center;
+    font-size: 5vw;
+    letter-spacing: 1px;
+    color: white;
+  }
+  .tropical-slogan-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+  }
+  .tropical-second-phrase {
+    font-family: $tropical-title;
+    font-size: 10vw;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    letter-spacing: 1px;
+    color: $tropical-primary;
+}
+  .tropical-third-phrase {
+    font-family: $tropical-title;
+    font-size: 9.5vw;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    color: $tropical-secondary;
+  }
+  .tropical-principal-image {
+    filter: brightness(85%);
+    z-index: 1;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+  }
+  .tropical-primary-button {
+    border: none;
+    background-color: $tropical-primary-complement;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: 0.7s;
+    font-weight: 600;
+    
+    &:hover {
+        background-color: $tropical-secondary;
+        color: $tropical-primary;
+        border-radius: 20px;
+      }
+    }
+    .tropical-secondary-button {
+      border: none;
+      background-color: $tropical-secondary;
+      font-weight: 600;
+      color: $tropical-primary-complement;
+      padding: 8px 12px;
+      border-radius: 10px;
+      transition: 0.3s;
+      
+      &:hover {
+        background-color: $tropical-primary;
+        color: white;
+        border-radius: 20px;
+    }
+  }
+  .tropical-lateral-text-container {
+    text-align: center;
+    z-index: 1;
+    color: white;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    .tropical-first-lateral-text {
+      font-family: $tropical-title;
+      font-size: 7vw;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+      letter-spacing: 2px;
+      color: $tropical-primary;
+    }
+    .tropical-second-lateral-text {
+        font-family: $tropical-title;
+        font-size: 7vw;
+        font-weight: 800;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+        letter-spacing: 2px;
+        color: $tropical-primary;
+    }
+  }
+  .miniature-tropical-image {
+    filter: brightness(90%);
+    cursor: pointer;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    transition: 0.6s;
+
+    &:hover {
+      filter: brightness(110%);
+    }
+  }
+  .TRminiature-gotic-image,
+  .TRminiature-fantasy-image,
+  .TRminiature-cyberpunk-image {
+    cursor: pointer;
+    filter: brightness(40%);
+    transition: 0.6s;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+
+    &:hover {
+      filter: brightness(90%);
+    
+    }
+  }
+  .tropical-div-gradient {
+    background-color: rgba($tropical-secondary, 0.3);
+    height: 14.5vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@include g.tablet {
+  .tropical-wallpaper {
+    background-position: center;
+    background-size: cover;
+
+    .tropical-link {
+      font-size: 18px;
+    }
+    .tropical-second-phrase {
+      font-size: 9vw;
+    }
+    .tropical-third-phrase {
+      font-size: 8vw;
+    }
+    .tropical-primary-button {
+      padding: 15px 20px;
+      font-size: 18px;
+    }
+    .tropical-secondary-button {
+      padding: 15px 20px;
+      font-size: 18px;
+    }
+    .tropical-lateral-text-container {
+      .tropical-first-lateral-text {
+        font-size: 10vw;
+      }
+    }
+  }
+}
+
+@include g.desktop {
+  .tropical-wallpaper {
+    background-position: center;
+    background-size: cover;
+
+    .tropical-link {
+      font-size: 20px;
+      font-weight: 600;
+      margin-right: 25px;
+    }
+    .tropical-toggler-nav {
+      background-color: rgba($tropical-primary, 0);
+      border-radius: 0px;
+      border: 0;
+      padding: 0;
+    }
+    .tropical-first-phrase{
+        justify-content: flex-start;
+        font-size: 2.1vw;
+        padding: 5px !important;
+    }
+    .tropical-second-phrase {
+      font-size: 5vw;
+      letter-spacing: 5px;
+      font-weight: 400;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    }
+    .tropical-third-phrase {
+      font-size: 4.3vw;
+      letter-spacing: 1px;
+      color: white;
+    }
+    .tropical-principal-image {
+      filter: brightness(85%);
+      width: auto;
+      height: 43%;
+    }
+    .tropical-primary-button {
+      padding: 8px 13px;
+    }
+    .tropical-secondary-button {
+      padding: 8px 13px;
+    }
+    .tropical-lateral-text-container {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      place-items: center;
+      height: 100vh;
+      z-index: 1;
+
+      .tropical-first-lateral-text {
+        font-family: $tropical-text;
+        text-transform: uppercase;
+        
+        font-size: 6vw;
+        white-space: nowrap;
+        font-weight: 800;
+      }
+      .tropical-second-lateral-text{
+
+        font-family: $tropical-text;
+        text-transform: uppercase;
+        white-space: nowrap;
+        font-size: 5vw;
+
+      }
+    }
+    .miniature-tropical-image {
+      filter: brightness(90%);
+      cursor: pointer;
+      height: 105px;
+      width: 100%;
+      object-fit: cover;
+      transition: 0.6s;
+
+      &:hover {
+        width: auto;
+        filter: brightness(120%);
+      }
+    }
+    .TRminiature-gotic-image,
+    .TRminiature-fantasy-image,
+    .TRminiature-cyberpunk-image {
+      cursor: pointer;
+      height: 95px;
+      width: auto;
+      filter: brightness(40%);
+      transition: 0.6s;
+
+      &:hover {
+        filter: brightness(100%);
+      }
+    }
+    .tropical-div-gradient {
+      background-color: rgba($tropical-backs, 0.4);
+      height: 100vh;
+      width: 27%;
+      left: initial;
+      right: 0;
+    }
+  }
+}

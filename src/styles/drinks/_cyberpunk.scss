@@ -1,0 +1,270 @@
+@use '../base/globals' as g;
+
+// Fonts
+$cyberpunk-title: "Audiowide", serif;
+$cyberpunk-subtitle: "Orbitron", sans-serif;
+$cyberpunk-text: "Righteous", sans-serif;
+
+// Colors
+$cyberpunk-dark: #1a1a1a;
+$cyberpunk-light: #e0e0e0;
+$cyberpunk-blue: #00eaff;
+$cyberpunk-darkblue: #8d3bfa;
+$cyberpunk-purple: #a53aff;
+$cyberpunk-pink: #ff3afc;
+
+.cyberpunk-wallpaper {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('background/cyberpunk-wallpaper.webp');
+  background-position: center;
+  background-size: cover;
+
+  .cyberpunk-link {
+    font-family: $cyberpunk-subtitle;
+    color: $cyberpunk-blue;
+    font-size: 5vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+
+    &:hover {
+      color: $cyberpunk-light;
+    }
+  }
+  .cyberpunk-toggler-nav {
+    background-color: rgba($cyberpunk-darkblue, 0.9);
+    border-radius: 5px;
+    border: 3px solid $cyberpunk-blue;
+    padding: 20px;
+  }
+  .cyberpunk-slogan-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cyberpunk-second-phrase {
+    font-family: $cyberpunk-title;
+    color: $cyberpunk-blue;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 6.5vw;
+  }
+  .cyberpunk-third-phrase {
+    font-family: $cyberpunk-title;
+    color: $cyberpunk-light;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 6vw;
+  }
+  .cyberpunk-principal-image {
+    filter: brightness(85%);
+    z-index: 1;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+
+  }
+  .cyberpunk-primary-button {
+    border: 2px solid $cyberpunk-blue;
+    background-color: $cyberpunk-darkblue;
+    color: $cyberpunk-blue;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: 0.7s;
+    
+    &:hover {
+        background-color: $cyberpunk-blue;
+        color: $cyberpunk-darkblue;
+        border: 2px solid $cyberpunk-darkblue;
+    }
+  }
+  .cyberpunk-secondary-button {
+    border: 2px solid $cyberpunk-darkblue;
+    background-color: $cyberpunk-light;
+    color: $cyberpunk-darkblue;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $cyberpunk-darkblue;
+      color: $cyberpunk-light;
+    }
+  }
+  .cyberpunk-lateral-text-container {
+    text-align: center;
+    z-index: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .cyberpunk-first-lateral-text {
+      font-family: $cyberpunk-subtitle;
+      font-size: 11vw;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+      letter-spacing: 2px;
+      color: $cyberpunk-blue;
+    }
+  }
+  .miniature-cyberpunk-image {
+    filter: brightness(90%);
+    cursor: pointer;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    transition: 0.6s;
+
+    &:hover {
+      filter: brightness(110%);
+    }
+  }
+  .CPminiature-gotic-image,
+  .CPminiature-tropical-image,
+  .CPminiature-fantasy-image {
+    cursor: pointer;
+    filter: brightness(50%);
+    transition: 0.6s;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+
+    &:hover {
+      filter: brightness(90%);
+    }
+  }
+  .cyberpunk-div-gradient {
+    background-color: rgba($cyberpunk-darkblue, 0.3);
+    height: 14.3vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@include g.tablet {
+  .cyberpunk-wallpaper {
+    background-position: center;
+    background-size: cover;
+
+    .cyberpunk-link {
+      font-size: 25px;
+    }
+    .cyberpunk-second-phrase {
+      font-size: 7vw;
+    }
+    .cyberpunk-third-phrase {
+      font-size: 6vw;
+    }
+    .cyberpunk-primary-button {
+      padding: 15px 20px;
+      font-size: 18px;
+    }
+    .cyberpunk-secondary-button {
+      padding: 15px 20px;
+      font-size: 18px;
+    }
+    .cyberpunk-lateral-text-container {
+      .cyberpunk-first-lateral-text {
+        font-size: 10vw;
+      }
+    }
+  }
+}
+
+@include g.desktop {
+  .cyberpunk-wallpaper {
+    background-position: center;
+    background-size: cover;
+
+    .cyberpunk-link {
+      font-size: 1vw;
+      font-weight: 400;
+      margin-right: 25px;
+    }
+    .cyberpunk-toggler-nav {
+      background-color: rgba($cyberpunk-purple, 0);
+      border-radius: 0px;
+      border: 0;
+      padding: 0;
+    }
+    .cyberpunk-second-phrase {
+      text-align: start !important;
+      font-size: 4vw;
+      letter-spacing: 2px;
+      font-weight: 400;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    }
+    .cyberpunk-third-phrase {
+      text-align: left;
+      font-size: 3.7vw;
+      letter-spacing: 1px;
+      color: white;
+    }
+    .cyberpunk-principal-image {
+      filter: brightness(85%);
+      width: auto;
+      height: 50%;
+    }
+    .cyberpunk-primary-button {
+      padding: 8px 13px;
+    }
+    .cyberpunk-secondary-button {
+      padding: 8px 13px;
+    }
+    .cyberpunk-lateral-text-container {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .cyberpunk-first-lateral-text {
+        transform: rotate(270deg);
+        font-family: $cyberpunk-subtitle;
+        text-transform: uppercase;
+        font-size: 5vw;
+        white-space: nowrap;
+        font-weight: 700;
+      }
+    }
+    .miniature-cyberpunk-image {
+      filter: brightness(90%);
+      cursor: pointer;
+      height: 105px;
+      width: 100%;
+      object-fit: cover;
+      transition: 0.6s;
+
+      &:hover {
+        width: auto;
+        filter: brightness(120%);
+      }
+    }
+    .CPminiature-gotic-image,
+    .CPminiature-tropical-image,
+    .CPminiature-fantasy-image {
+      cursor: pointer;
+      height: 95px;
+      width: auto;
+      filter: brightness(50%);
+      transition: 0.6s;
+
+      &:hover {
+        filter: brightness(100%);
+      }
+    }
+    .cyberpunk-div-gradient {
+      background-color: rgba($cyberpunk-darkblue, 0.4);
+      height: 100vh;
+      width: 25%;
+      left: initial;
+      right: 0;
+    }
+  }
+}
